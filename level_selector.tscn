@@ -1,0 +1,52 @@
+[gd_scene load_steps=2 format=3 uid="uid://badamta182u28"]
+
+[ext_resource type="Script" path="res://level_selector.gd" id="1_ohltq"]
+
+[node name="LevelSelector" type="CenterContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ohltq")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="LevelOneButton" type="Button" parent="VBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(64, 16)
+layout_mode = 2
+text = "Level One"
+
+[node name="LevelTwoButton" type="Button" parent="VBoxContainer"]
+custom_minimum_size = Vector2(64, 16)
+layout_mode = 2
+text = "Level Two"
+
+[node name="LevelThreeButton" type="Button" parent="VBoxContainer"]
+custom_minimum_size = Vector2(64, 16)
+layout_mode = 2
+text = "Level Three"
+
+[node name="LevelFourButton" type="Button" parent="VBoxContainer"]
+custom_minimum_size = Vector2(64, 16)
+layout_mode = 2
+text = "Level Four"
+
+[node name="LevelFiveButton" type="Button" parent="VBoxContainer"]
+custom_minimum_size = Vector2(64, 16)
+layout_mode = 2
+text = "Level Five"
+
+[node name="BackButton" type="Button" parent="VBoxContainer"]
+custom_minimum_size = Vector2(64, 16)
+layout_mode = 2
+text = "Back"
+
+[connection signal="pressed" from="VBoxContainer/LevelOneButton" to="." method="_on_level_one_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/LevelTwoButton" to="." method="_on_level_two_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/LevelThreeButton" to="." method="_on_level_three_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/LevelFourButton" to="." method="_on_level_four_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/LevelFiveButton" to="." method="_on_level_five_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/BackButton" to="." method="_on_back_button_pressed"]
