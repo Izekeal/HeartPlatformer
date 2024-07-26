@@ -10,6 +10,7 @@ var was_wall_normal = Vector2.ZERO
 @onready var animated_sprite_2d = $AnimatedSprite2D
 @onready var coyote_jump_timer = $CoyoteJumpTimer
 @onready var starting_position = global_position
+@onready var current_y_position = global_position.y
 @onready var wall_jump_timer = $WallJumpTimer
 
 func _physics_process(delta):
@@ -33,6 +34,7 @@ func _physics_process(delta):
 	var just_left_wall = was_on_wall and not is_on_wall()
 	if just_left_wall:
 		wall_jump_timer.start()
+	death_plane()
 	update_animations(input_axis)
 
 
@@ -96,3 +98,10 @@ func update_animations(input_axis):
 
 func _on_hazard_detector_area_entered(area):
 	global_position = starting_position
+
+#Check to see if the player has dropped beyond 500 on the Y axis
+#if so, reset their position to their starting position.
+func death_plane():
+	current_y_position = global_position.y
+	if current_y_position > 500:
+		global_position = starting_position
