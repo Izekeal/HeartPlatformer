@@ -78,41 +78,38 @@ position = Vector2(360, 8)
 [node name="Heart10" parent="." index="25" instance=ExtResource("3_ueeva")]
 position = Vector2(392, 56)
 
-[node name="Spikes13" parent="." index="26" instance=ExtResource("2_lbos3")]
-position = Vector2(64, -80)
-
-[node name="Spikes14" parent="." index="27" instance=ExtResource("2_lbos3")]
+[node name="Spikes14" parent="." index="26" instance=ExtResource("2_lbos3")]
 position = Vector2(128, -80)
 
-[node name="Spikes15" parent="." index="28" instance=ExtResource("2_lbos3")]
+[node name="Spikes15" parent="." index="27" instance=ExtResource("2_lbos3")]
 position = Vector2(96, -160)
 
-[node name="Spikes16" parent="." index="29" instance=ExtResource("2_lbos3")]
+[node name="Spikes16" parent="." index="28" instance=ExtResource("2_lbos3")]
 position = Vector2(112, -160)
 
-[node name="Spikes17" parent="." index="30" instance=ExtResource("2_lbos3")]
+[node name="Spikes17" parent="." index="29" instance=ExtResource("2_lbos3")]
 position = Vector2(192, -128)
 
-[node name="Spikes18" parent="." index="31" instance=ExtResource("2_lbos3")]
+[node name="Spikes18" parent="." index="30" instance=ExtResource("2_lbos3")]
 position = Vector2(256, -128)
 
-[node name="Spikes19" parent="." index="32" instance=ExtResource("2_lbos3")]
+[node name="Spikes19" parent="." index="31" instance=ExtResource("2_lbos3")]
 position = Vector2(192, -208)
 
-[node name="Spikes20" parent="." index="33" instance=ExtResource("2_lbos3")]
+[node name="Spikes20" parent="." index="32" instance=ExtResource("2_lbos3")]
 position = Vector2(256, -208)
 
-[node name="Spikes21" parent="." index="34" instance=ExtResource("2_lbos3")]
+[node name="Spikes21" parent="." index="33" instance=ExtResource("2_lbos3")]
 position = Vector2(384, -80)
 
-[node name="Spikes22" parent="." index="35" instance=ExtResource("2_lbos3")]
+[node name="Spikes22" parent="." index="34" instance=ExtResource("2_lbos3")]
 position = Vector2(432, -80)
 
-[node name="Heart11" parent="." index="36" instance=ExtResource("3_ueeva")]
+[node name="Heart11" parent="." index="35" instance=ExtResource("3_ueeva")]
 position = Vector2(-312, -152)
 
-[node name="Heart12" parent="." index="37" instance=ExtResource("3_ueeva")]
+[node name="Heart12" parent="." index="36" instance=ExtResource("3_ueeva")]
 position = Vector2(280, -56)
 
-[node name="Heart13" parent="." index="38" instance=ExtResource("3_ueeva")]
+[node name="Heart13" parent="." index="37" instance=ExtResource("3_ueeva")]
 position = Vector2(400, -152)

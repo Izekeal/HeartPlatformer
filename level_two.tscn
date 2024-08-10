@@ -90,3 +90,24 @@ position = Vector2(104, -72)
 
 [node name="Heart13" parent="." index="28" instance=ExtResource("3_al00g")]
 position = Vector2(232, -120)
+
+[node name="Spikes11" parent="." index="29" instance=ExtResource("2_uqhoq")]
+position = Vector2(304, 32)
+
+[node name="Spikes12" parent="." index="30" instance=ExtResource("2_uqhoq")]
+position = Vector2(368, 32)
+
+[node name="Spikes15" parent="." index="31" instance=ExtResource("2_uqhoq")]
+position = Vector2(312, -32)
+
+[node name="Spikes16" parent="." index="32" instance=ExtResource("2_uqhoq")]
+position = Vector2(328, -32)
+
+[node name="Spikes17" parent="." index="33" instance=ExtResource("2_uqhoq")]
+position = Vector2(584, -80)
+
+[node name="Spikes18" parent="." index="34" instance=ExtResource("2_uqhoq")]
+position = Vector2(480, 112)
+
+[node name="Spikes19" parent="." index="35" instance=ExtResource("2_uqhoq")]
+position = Vector2(304, 144)
