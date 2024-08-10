@@ -30,8 +30,6 @@ func _ready():
 func _process(delta):
 	level_time = Time.get_ticks_msec() - start_level_msec
 	level_time_label.text = str(level_time / 1000.0)
-	if Input.is_action_pressed("Respawn"):
-		retry()
 	
 func retry():		
 	await LevelTransition.fade_to_black()
