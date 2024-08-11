@@ -15,7 +15,7 @@ func _ready():
 	LevelTransition.fade_from_black()
 	menu_button.grab_focus()
 	level_one_label.text = str("Warmup:  ") + str(LevelTime.level_one_time / 1000.0)
-	level_two_label.text = str("Mind The Gaps:  ") + str(LevelTime.level_two_time / 1000.0)
+	level_two_label.text = str("The Gaps:  ") + str(LevelTime.level_two_time / 1000.0)
 	level_three_label.text = str("Big Jump:  ") + str(LevelTime.level_three_time / 1000.0)
 	level_four_label.text = str("Gauntlet:  ") + str(LevelTime.level_four_time / 1000.0)
 	level_five_label.text = str("Islands:  ") + str(LevelTime.level_five_time / 1000.0)
