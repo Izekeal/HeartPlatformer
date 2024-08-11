@@ -20,12 +20,12 @@ func _ready():
 	get_tree().paused = true
 	start_in.visible = true
 	LevelTransition.fade_from_black()
-	animation_player.play("countdown")
+	#add a function here to play the level countdown
+	level_countdown()
 	await animation_player.animation_finished
 	get_tree().paused = false
 	start_in.visible = false
 	start_level_msec = Time.get_ticks_msec()
-	
 	
 func _process(delta):
 	level_time = Time.get_ticks_msec() - start_level_msec
@@ -35,6 +35,18 @@ func retry():
 	await LevelTransition.fade_to_black()
 	get_tree().paused = false
 	get_tree().change_scene_to_file(scene_file_path)
+	
+func level_countdown():
+	if scene_file_path == ("res://level_one.tscn"):
+		animation_player.play("level_one")
+	if scene_file_path == ("res://level_two.tscn"):
+		animation_player.play("level_two")
+	if scene_file_path == ("res://level_three.tscn"):
+		animation_player.play("level_three")
+	if scene_file_path == ("res://level_four.tscn"):
+		animation_player.play("level_four")
+	if scene_file_path == ("res://level_five.tscn"):
+		animation_player.play("level_five")
 	
 func go_to_next_level():
 	if not next_level is PackedScene: return

@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://ct54i6vq3xwdf"]
+[gd_scene load_steps=12 format=3 uid="uid://ct54i6vq3xwdf"]
 
 [ext_resource type="Script" path="res://world.gd" id="1_lohvn"]
 [ext_resource type="PackedScene" uid="uid://v0yi8ebio1yg" path="res://player.tscn" id="2_a68bu"]
@@ -20,8 +20,8 @@ tracks/0/keys = {
 "values": ["Start in: 3"]
 }
 
-[sub_resource type="Animation" id="Animation_n4qp6"]
-resource_name = "countdown"
+[sub_resource type="Animation" id="Animation_h5rbx"]
+resource_name = "level_five"
 length = 3.0
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -33,13 +33,96 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 1, 2),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
-"values": ["Start in: 3", "Start in: 2", "Start in: 1"]
+"values": ["ISLANDS
+Start in: 3", "ISLANDS
+Start in: 2", "ISLANDS
+Start in: 1"]
+}
+
+[sub_resource type="Animation" id="Animation_r614e"]
+resource_name = "level_four"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/StartIn/CenterContainer/StartInLabel:text")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": ["GAUNTLET
+Start in: 3", "GAUNTLET
+Start in: 2", "GAUNTLET
+Start in: 1"]
+}
+
+[sub_resource type="Animation" id="Animation_n4qp6"]
+resource_name = "level_one"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/StartIn/CenterContainer/StartInLabel:text")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": ["WARMUP
+Start in: 3", "WARMUP
+Start in: 2", "WARMUP
+Start in: 1"]
+}
+
+[sub_resource type="Animation" id="Animation_mal2g"]
+resource_name = "level_three"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/StartIn/CenterContainer/StartInLabel:text")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": ["BIG JUMP
+Start in: 3", "BIG JUMP
+Start in: 2", "BIG JUMP
+Start in: 1"]
+}
+
+[sub_resource type="Animation" id="Animation_ux6hb"]
+resource_name = "level_two"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/StartIn/CenterContainer/StartInLabel:text")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": ["THE GAPS
+Start in: 3", "THE GAPS
+Start in: 2", "THE GAPS
+Start in: 1"]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_cyjgy"]
 _data = {
 "RESET": SubResource("Animation_wmuql"),
-"countdown": SubResource("Animation_n4qp6")
+"level_five": SubResource("Animation_h5rbx"),
+"level_four": SubResource("Animation_r614e"),
+"level_one": SubResource("Animation_n4qp6"),
+"level_three": SubResource("Animation_mal2g"),
+"level_two": SubResource("Animation_ux6hb")
 }
 
 [node name="World" type="Node2D"]
@@ -77,6 +160,7 @@ grow_vertical = 2
 unique_name_in_owner = true
 layout_mode = 2
 text = "Start in: 3"
+horizontal_alignment = 1
 
 [node name="CenterContainer" type="CenterContainer" parent="CanvasLayer"]
 anchors_preset = 10
