@@ -5,6 +5,12 @@ extends CenterContainer
 
 func _ready():
 	RenderingServer.set_default_clear_color(Color.BLACK)
+	#Reset the level times to zero as this clears the times from the pause menu
+	LevelTime.level_one_time = 0
+	LevelTime.level_two_time = 0
+	LevelTime.level_three_time = 0
+	LevelTime.level_four_time = 0
+	LevelTime.level_five_time = 0
 	start_game_button.grab_focus()
 
 func _on_start_game_button_pressed():
