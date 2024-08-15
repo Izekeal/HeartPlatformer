@@ -10,6 +10,7 @@ var start_level_msec = 0.0
 @onready var animation_player = $AnimationPlayer
 @onready var level_completed = $CanvasLayer/LevelCompleted
 @onready var level_time_label = %LevelTimeLabel
+@onready var pause_menu = %PauseMenu
 
 func _ready():
 	if not next_level is PackedScene:
@@ -20,7 +21,6 @@ func _ready():
 	get_tree().paused = true
 	start_in.visible = true
 	LevelTransition.fade_from_black()
-	#add a function here to play the level countdown
 	level_countdown()
 	await animation_player.animation_finished
 	get_tree().paused = false
@@ -30,6 +30,8 @@ func _ready():
 func _process(delta):
 	level_time = Time.get_ticks_msec() - start_level_msec
 	level_time_label.text = str(level_time / 1000.0)
+	if Input.is_action_just_pressed("pause_menu"):
+		paused()
 	
 func retry():		
 	await LevelTransition.fade_to_black()
@@ -58,6 +60,8 @@ func go_to_next_level():
 
 func show_level_completed():
 	level_completed.show()
+	#See if it makes more sense to have the next_level button grab focus
+	#mostly from player feedback
 	level_completed.retry_button.grab_focus()
 	get_tree().paused = true
 	
@@ -79,3 +83,19 @@ func _on_level_completed_retry():
 
 func _on_level_completed_next_level():
 	go_to_next_level()
+
+func paused():
+	get_tree().paused = true
+	pause_menu.show()
+	pause_menu.resume_button.grab_focus()
+	
+func _on_pause_menu_resume():
+	get_tree().paused = false
+	pause_menu.hide()
+	
+func _on_pause_menu_main_menu():
+	get_tree().paused = false
+	get_tree().change_scene_to_file("res://start_menu.tscn")
+
+func _on_pause_menu_restart_level():
+	retry()
