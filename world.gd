@@ -61,7 +61,7 @@ func go_to_next_level():
 func show_level_completed():
 	level_completed.show()
 	#See if it makes more sense to have the next_level button grab focus
-	#mostly from player feedback
+	#Ask for player feedback on that decision
 	level_completed.retry_button.grab_focus()
 	get_tree().paused = true
 	

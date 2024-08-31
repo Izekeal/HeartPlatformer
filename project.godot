@@ -14,7 +14,8 @@ config/name="Heart Platformer"
 run/main_scene="res://start_menu.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
 run/max_fps=60
-config/icon="res://icon.svg"
+config/icon="res://heart.png"
+config/windows_native_icon="res://heart.ico"
 
 [autoload]
 
