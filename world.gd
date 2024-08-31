@@ -33,7 +33,7 @@ func _process(delta):
 	if Input.is_action_just_pressed("pause_menu"):
 		paused()
 	
-func retry():		
+func retry():
 	await LevelTransition.fade_to_black()
 	get_tree().paused = false
 	get_tree().change_scene_to_file(scene_file_path)

@@ -5,6 +5,8 @@ signal resume()
 signal restart_level()
 signal main_menu()
 
+
+@onready var run_killer = 1
 @onready var resume_button = %ResumeButton
 @onready var restart_level_button = %RestartLevelButton
 @onready var main_menu_button = %MainMenuButton
@@ -28,7 +30,9 @@ func _on_resume_button_pressed():
 
 
 func _on_restart_level_button_pressed():
-	restart_level.emit()
+	if run_killer == 1:
+		run_killer = 2
+		restart_level.emit()
 
 
 func _on_main_menu_button_pressed():
